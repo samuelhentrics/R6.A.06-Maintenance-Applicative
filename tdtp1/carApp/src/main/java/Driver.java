@@ -3,9 +3,9 @@ public class Driver {
     private String name;
     private int age;
 
-    public Driver(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Driver(String driverName, int driverAge) {
+        this.name = driverName;
+        this.age = driverAge;
     }
 
     private boolean isAdult() {
