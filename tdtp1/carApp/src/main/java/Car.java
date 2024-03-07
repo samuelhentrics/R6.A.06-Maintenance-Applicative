@@ -1,11 +1,11 @@
-public class Voiture {
+public class Car {
     public static final int VITESSE_MAX = 120;
     public static final int VITESSE_MIN = 0;
     private String modele;
     private String couleur;
     private int vitesse;
 
-    public Voiture(String modele, String couleur) {
+    public Car(String modele, String couleur) {
         this.modele = modele;
         this.couleur = couleur;
         this.vitesse = 0;
