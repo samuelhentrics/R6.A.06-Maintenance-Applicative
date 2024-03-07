@@ -1,4 +1,5 @@
 public class Driver {
+    public static final int ADULT_AGE = 18;
     private String name;
     private int age;
 
@@ -8,7 +9,7 @@ public class Driver {
     }
 
     public boolean isAdult() {
-        return age >= 10;
+        return age >= ADULT_AGE;
     }
 
     public void startCar(Car car) {
