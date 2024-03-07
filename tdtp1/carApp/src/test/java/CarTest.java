@@ -13,15 +13,15 @@ public class CarTest {
 
     @Test
     public void testAccelerer() {
-        car.accelerer();
-        assertThat(car.getVitesse()).isEqualTo(10);
+        car.accelerate();
+        assertThat(car.getSpeed()).isEqualTo(10);
     }
 
     @Test
     public void testRalentir() {
-        car.accelerer();
-        car.ralentir();
-        assertThat(car.getVitesse()).isEqualTo(0);
+        car.accelerate();
+        car.slow();
+        assertThat(car.getSpeed()).isEqualTo(0);
     }
 
     @Test

@@ -13,20 +13,20 @@ public class DriverTest {
 
     @Test
     public void testEstAdulte() {
-        assertThat(driver.estAdulte()).isTrue();
+        assertThat(driver.isAdult()).isTrue();
     }
 
     @Test
     public void testDemarrerVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        driver.demarrerVoiture(car);
+        driver.startCar(car);
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
     public void testArreterVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        driver.arreterVoiture(car);
+        driver.stopCar(car);
         // How to assert that the arreterVoiture method was called?
     }
 
@@ -34,7 +34,7 @@ public class DriverTest {
     public void testChangerVitesse() {
         Car car = new Car("Sedan", "Bleu");
 
-        driver.changerVitesse(car, 80);
-        assertThat(car.getVitesse()).isEqualTo(80);
+        driver.changeSpeed(car, 80);
+        assertThat(car.getSpeed()).isEqualTo(80);
     }
 }

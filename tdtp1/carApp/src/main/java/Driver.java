@@ -1,38 +1,39 @@
 public class Driver {
-    private String nom;
+    private String name;
     private int age;
 
     public Driver(String name, int age) {
-        this.nom = name;
+        this.name = name;
         this.age = age;
     }
 
-    public boolean estAdulte() {
+    public boolean isAdult() {
         return age >= 10;
     }
 
-    public void demarrerVoiture(Car car) {
-        if (estAdulte()) {
-            System.out.println(nom + " démarre la voiture.");
+    public void startCar(Car car) {
+        if (isAdult()) {
+            System.out.println(name + " démarre la voiture.");
         } else {
             System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
         }
     }
 
-    public void arreterVoiture(Car car) {
-        System.out.println(nom + " arrête la voiture.");
+    public void stopCar(Car car) {
+        System.out.println(name + " arrête la voiture.");
     }
 
-    public void changerVitesse(Car car, int nouvelleVitesse) {
-        System.out.println(nom + " change la vitesse de la voiture à " + nouvelleVitesse);
+    public void changeSpeed(Car car, int newSpeed) {
+        System.out.println(name + " change la vitesse de la voiture à " + newSpeed);
         int vitesseActuelle;
-        if (car.getVitesse() >= nouvelleVitesse) {
-            while (car.getVitesse() > nouvelleVitesse) {
-                car.ralentir();
+        if (car.getSpeed() >= newSpeed) {
+            while (car.getSpeed() > newSpeed) {
+                car.slow();
             }
-        } else  {
-            while (car.getVitesse() < nouvelleVitesse) {
-                car.accelerer();
+        }
+        else  {
+            while (car.getSpeed() < newSpeed) {
+                car.accelerate();
             }
         }
     }
