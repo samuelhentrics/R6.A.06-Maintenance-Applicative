@@ -1,5 +1,5 @@
 public class Driver {
-    public static final int ADULT_AGE = 18;
+    private static final int ADULT_AGE = 18;
     private String name;
     private int age;
 
@@ -8,7 +8,7 @@ public class Driver {
         this.age = age;
     }
 
-    public boolean isAdult() {
+    private boolean isAdult() {
         return age >= ADULT_AGE;
     }
 
