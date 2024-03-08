@@ -1,9 +1,9 @@
-@SuppressWarnings("checkstyle:JavadocPackage")
+
 public class Driver {
     private static final int ADULT_AGE = 18;
 
     private String name;
-    
+
     private int age;
 
     /**
@@ -42,6 +42,7 @@ public class Driver {
      */
     public void stopCar(Car car) {
         System.out.println(name + " arrête la voiture.");
+        this.changeSpeed(car, 0);
     }
 
     /**

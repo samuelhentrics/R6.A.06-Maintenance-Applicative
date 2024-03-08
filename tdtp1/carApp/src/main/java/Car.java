@@ -46,7 +46,7 @@ public class Car {
     /**
      * Display the details of the car
      */
-    private void carDetails() {
+    protected void carDetails() {
         System.out.println("Modèle : " + model);
         System.out.println("Couleur : " + color);
         System.out.println("Vitesse actuelle : " + speed);

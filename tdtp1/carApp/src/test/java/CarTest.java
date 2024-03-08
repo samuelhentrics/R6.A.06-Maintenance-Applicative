@@ -12,21 +12,26 @@ public class CarTest {
     }
 
     @Test
-    public void testAccelerer() {
+    public void testSpeedUp() {
         car.accelerate();
         assertThat(car.getSpeed()).isEqualTo(10);
     }
 
     @Test
-    public void testRalentir() {
+    public void testSlowDown() {
         car.accelerate();
         car.slow();
         assertThat(car.getSpeed()).isEqualTo(0);
     }
 
     @Test
-    public void testAfficherDetails() {
-        // How to assert the output using AssertJ for console output?
-        // Note: Testing console output is often more complex and depends on additional libraries.
+    public void testShowDetails() {
+        car.carDetails();
+
+        /** Modèle : Sedan
+        Couleur : Bleu
+        Vitesse actuelle : 0
+        **/
+
     }
 }

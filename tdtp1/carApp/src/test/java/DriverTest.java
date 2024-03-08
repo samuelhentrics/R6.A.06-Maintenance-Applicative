@@ -12,26 +12,26 @@ public class DriverTest {
     }
 
     @Test
-    public void testEstAdulte() {
+    public void testIsAdult() {
         assertThat(driver.isAdult()).isTrue();
     }
 
     @Test
-    public void testDemarrerVoiture() {
+    public void testStartCar() {
         Car car = new Car("Sedan", "Bleu");
         driver.startCar(car);
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
-    public void testArreterVoiture() {
+    public void testStopCar() {
         Car car = new Car("Sedan", "Bleu");
         driver.stopCar(car);
         // How to assert that the arreterVoiture method was called?
     }
 
     @Test
-    public void testChangerVitesse() {
+    public void testChangeSpeed() {
         Car car = new Car("Sedan", "Bleu");
 
         driver.changeSpeed(car, 80);
