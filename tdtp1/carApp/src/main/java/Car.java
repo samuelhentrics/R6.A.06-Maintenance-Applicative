@@ -35,6 +35,19 @@ public class Car {
         this.speed = 0;
     }
 
+    public void changeSpeed(int newSpeed) {
+        if (this.getSpeed() >= newSpeed) {
+            while (this.getSpeed() > newSpeed) {
+                this.slow();
+            }
+        }
+        else  {
+            while (this.getSpeed() < newSpeed) {
+                this.accelerate();
+            }
+        }
+    }
+
     /**
      * Get the speed of the car
      * @return the speed of the car

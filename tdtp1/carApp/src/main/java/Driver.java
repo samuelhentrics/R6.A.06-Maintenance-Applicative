@@ -53,15 +53,7 @@ public class Driver {
     @SuppressWarnings({"checkstyle:RightCurly", "checkstyle:FinalParameters"})
     public void changeSpeed(Car car, final int newSpeed) {
         System.out.println(name + " change la vitesse de la voiture à " + newSpeed);
-        if (car.getSpeed() >= newSpeed) {
-            while (car.getSpeed() > newSpeed) {
-                car.slow();
-            }
-        }
-        else  {
-            while (car.getSpeed() < newSpeed) {
-                car.accelerate();
-            }
-        }
+        car.changeSpeed(newSpeed);
     }
+
 }
