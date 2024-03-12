@@ -72,4 +72,18 @@ class FeeCalculatorTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("TicketType not supported");
     }
+
+    @Test
+    public void should_throw_exception_when_ticketType_not_supported_for_age_before_14(){
+        //GIVEN
+        Visitor children = new Visitor(10);
+
+        //WHEN
+        IllegalArgumentException error = (IllegalArgumentException) catchException( () -> FeeCalculator.calculateFee(children, TicketType.WEEK) );
+        //THEN
+        assertThat(error)
+                .isNotNull()
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("TicketType not supported");
+    }
 }
