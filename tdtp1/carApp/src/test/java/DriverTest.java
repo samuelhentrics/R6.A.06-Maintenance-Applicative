@@ -17,6 +17,18 @@ public class DriverTest {
     }
 
     @Test
+    public void testIsNotAdult() {
+        Driver driver = new Driver("John", 17);
+        assertThat(driver.isAdult()).isFalse();
+    }
+
+    @Test
+    public void testAdultEquals18() {
+        Driver driver = new Driver("John", 18);
+        assertThat(driver.isAdult()).isTrue();
+    }
+
+    @Test
     public void testStartCar() {
         Car car = new Car("Sedan", "Bleu");
         driver.startCar(car);

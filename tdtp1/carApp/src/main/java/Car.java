@@ -32,7 +32,7 @@ public class Car {
     public Car(String model, String color) {
         this.model = model;
         this.color = color;
-        this.speed = 0;
+        this.speed = MIN_SPEED;
     }
 
     public void changeSpeed(int newSpeed) {
