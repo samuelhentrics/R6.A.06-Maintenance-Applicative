@@ -9,7 +9,7 @@ public class FeeCalculator {
 
         // calculate price for adults
         if (visitor.age > 14) {
-            fee = calculateAdultFee(ticketType, fee);
+            fee = calculateAdultFee(ticketType);
         }
 
         // calculate price for children
@@ -23,13 +23,13 @@ public class FeeCalculator {
         return fee;
     }
 
-    private static double calculateAdultFee(TicketType ticketType) throws Exception {
+    private static double calculateAdultFee(TicketType ticketType) {
         if (TicketType.HALF_DAY == ticketType) {
             return ADULT_PRICE_BASE * 0.6;
         }
         else if (TicketType.FULL_DAY == ticketType) {
             return ADULT_PRICE_BASE * 1.2;
         }
-        throw new IllegalArgumentException("TicketType not supported");
+        throw (new IllegalArgumentException("TicketType not supported"));
     }
 }
